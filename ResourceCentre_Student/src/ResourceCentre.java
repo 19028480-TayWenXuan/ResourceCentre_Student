@@ -258,5 +258,7 @@ public class ResourceCentre {
 		// write your code here
 	}
 
-
+	public String concatenate_Zuhaili(String one , String two) {
+		return "hello";
+	}
 }
