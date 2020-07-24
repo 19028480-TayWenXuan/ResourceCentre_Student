@@ -172,7 +172,7 @@ public class ResourceCentre {
 	
 	public static Chromebook inputChromebook() {	
 		//Chromebook cb =null;
-		// write your code here
+		// write your codes here
 		String CBtag = Helper.readString("Enter asset tag > ");
 		String CBdescription = Helper.readString("Enter description > ");
 		String os = Helper.readString("Enter operating system > ");
