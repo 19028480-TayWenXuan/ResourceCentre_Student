@@ -47,11 +47,26 @@ public class ResourceCentreTest {
 		//Add another item. test The size of the list is 2?
 		ResourceCentre.addCamcorder(camcorderList, cc2);
 		assertEquals("Test that Camcorder arraylist size is 2?", 2, camcorderList.size());
+	
+		
 	}
 	@Test
 	public void addChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		assertNotNull("Test if there is valid Chromebook arraylist to add to", chromebookList);
+		
+		//Given an empty list, after adding 1 item, the size of the list is 1
+	    ResourceCentre.addChromebook(chromebookList, cb1);    
+	    assertEquals("Test if that Chromebook arraylist size is 1?", 1, chromebookList.size());
+	
+	  //The item just added is as same as the first item of the list
+	    assertSame("Test that Chromebook is added same as 2nd item of the list?", cc2, chromebookList.get(0));
+	
+	  //Add another item. test The size of the list is 2?
+	    ResourceCentre.addChromebook(chromebookList, cb2);
+	    assertEquals("Test that Camcorder arraylist size is 2?", 2, chromebookList.size());
+	//
 	}
 	
 	@Test
@@ -82,6 +97,23 @@ public class ResourceCentreTest {
 	public void retrieveAllChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		assertNotNull("Test if there is valid Camcorder arraylist to add to", chromebookList);
+		
+		String allChromebook = ResourceCentre.retrieveAllChromebook(chromebookList);
+		String testOutput = "";
+		assertEquals("Check that ViewAllChromebookList", testOutput, allChromebook);
+		
+		ResourceCentre.addChromebook(chromebookList, cb1);
+		ResourceCentre.addChromebook(chromebookList, cb2);
+		assertEquals("Test if that ChromeBook arraylist size is 2?", 2, chromebookList.size());
+		
+		allChromebook= ResourceCentre.retrieveAllChromebook(chromebookList);
+		
+		testOutput = String.format("%-10s %-30s %-10s %-10s %-20d\n","CB001", "ASUS Chromebook ", "Yes", "", 40);
+		testOutput += String.format("%-10s %-30s %-10s %-10s %-20d\n","CB002", "HP Chromebook", "Yes", "", 20);
+	
+		assertEquals("Check that ViewAllCamcorderlist", testOutput, allChromebook);
+		
 	}
 
 	@Test
@@ -129,7 +161,13 @@ public class ResourceCentreTest {
 		camcorderList = null;
 		chromebookList = null;
 
+<<<<<<< HEAD
 	}
+=======
+	}
+
+
+>>>>>>> branch 'master' of https://github.com/19028480-TayWenXuan/ResourceCentre_Student.git
 	
 
 }
