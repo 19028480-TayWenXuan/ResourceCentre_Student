@@ -254,9 +254,18 @@ public class ResourceCentre {
 		return isReturned;
 	}
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
+	
+	}
+	    
+	 
+	    public String concatenate(String one, String two){
+	            return "hello";
+
+
 		// write your code here
 		// write your code here
 	}
-
-
 }
+
+
+
