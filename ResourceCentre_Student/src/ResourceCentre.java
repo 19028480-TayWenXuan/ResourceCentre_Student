@@ -257,6 +257,10 @@ public class ResourceCentre {
 		// write your code here
 		// write your code here
 	}
+    
+	public String concatenate_WenXuan(String one, String two){
+        return "hello";
+}
 
 
 }
