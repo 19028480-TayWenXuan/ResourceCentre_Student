@@ -293,6 +293,15 @@ public class ResourceCentre {
 		// write your code here
 		// write your code here
 	}
+<<<<<<< HEAD
+    
+	public String concatenate_WenXuan(String one, String two){
+        return "hello";
+}
+
+
+=======
+>>>>>>> branch 'master' of https://github.com/19028480-TayWenXuan/ResourceCentre_Student.git
 }
 
 
