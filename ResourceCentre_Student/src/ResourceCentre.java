@@ -171,13 +171,20 @@ public class ResourceCentre {
 	}
 	
 	public static Chromebook inputChromebook() {	
-		Chromebook cb =null;
+		//Chromebook cb =null;
 		// write your code here
+		String CBtag = Helper.readString("Enter asset tag > ");
+		String CBdescription = Helper.readString("Enter description > ");
+		String os = Helper.readString("Enter operating system > ");
+
+		Chromebook cb= new Chromebook(CBtag, CBdescription, os);
 		return cb;
 		
 	}	
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
 		// write your code here
+		chromebookList.add(cb);
+		System.out.println("Chromebook added");
 	}
 	
 	//================================= Option 3 Loan =================================
@@ -254,11 +261,19 @@ public class ResourceCentre {
 		return isReturned;
 	}
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
+	
+	}
+	    
+	 
+	    public String concatenate(String one, String two){
+	            return "hello";
+
+
 		// write your code here
 		// write your code here
 	}
 
-	public String concatenate_Zuhaili(String one , String two) {
-		return "hello";
-	}
 }
+
+
+
