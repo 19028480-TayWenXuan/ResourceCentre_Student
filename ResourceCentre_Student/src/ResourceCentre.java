@@ -188,6 +188,12 @@ public class ResourceCentre {
 		
 	}	
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
+		String newAsset = Helper.readString("Enter asset tag > ");
+		String newDesc = Helper.readString("Enter description > ");
+		String newOS = Helper.readString("Enter operating system > ");
+		chromebookList.add(new Chromebook(newAsset, newDesc, newOS));
+		System.out.print("Chromebook added");
+		
 
 		// write your code here
 		chromebookList.add(cb);
@@ -282,7 +288,7 @@ public class ResourceCentre {
 			}
 		}
 		return isReturned;
-		
+		//
 	}
 	public static void returnCamcorder(ArrayList<Camcorder> camcorderList) {
 		ResourceCentre.viewAllCamcorder(camcorderList);
