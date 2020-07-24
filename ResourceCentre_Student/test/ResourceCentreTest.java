@@ -125,36 +125,79 @@ public class ResourceCentreTest {
 	public void doLoanCamcorderTest() {
 		//fail("Not yet implemented");
 		// write your code here
-		//Test
+		//Zuhaili
+		ResourceCentre.addCamcorder(camcorderList, cc1);	
+		ResourceCentre.addCamcorder(camcorderList, cc2);
+		
+		Boolean isLoaned1 = ResourceCentre.doLoanCamcorder(this.camcorderList, "CC0011", "0");
+		Boolean isLoaned2 = ResourceCentre.doLoanCamcorder(this.camcorderList, "CC0012", "0");
+		
+		assertTrue("Test if available camcorder CC0011 can be loaned", isLoaned1);
+		assertTrue("Test if available camcorder CC0012 can be loaned", isLoaned2);
+		
+		System.out.println("Pass: Normal test - loan available");
+		
+		
+
+		Boolean isLoaned3 = ResourceCentre.doLoanCamcorder(this.camcorderList, "CC0011", "0");
+		Boolean isLoaned4 = ResourceCentre.doLoanCamcorder(this.camcorderList, "CC0012", "0");
+		
+		assertFalse("Test if unavailable camcorder CC0011 can be loaned", isLoaned3);
+		assertFalse("Test if unavailable camcorder CC0012 can be loaned", isLoaned4);
+
+		System.out.println("Pass: Error test - loan unavailable");
+		
+		
+
+		Boolean isLoaned5 = ResourceCentre.doLoanCamcorder(this.camcorderList, "CC0099", "0");
+		Boolean isLoaned6 = ResourceCentre.doLoanCamcorder(this.camcorderList, "CC0100", "0");
+		
+		assertFalse("Test if available non-existent camcorder CC0099 can be loaned", isLoaned5);
+		assertFalse("Test if available non-existent camcorder CC0100 can be loaned", isLoaned6);
+
+		System.out.println("Pass: Error test - loan non-existent");
 	}
 	
 	@Test
 	public void doLoanChromebookTest() {
-	    //boundary
-	        assertNotNull("test if there is valid Camcorder arraylist to loan from", camcorderList);
-	       
-	        ResourceCentre.addCamcorder(camcorderList, cc1);
-	        // normal
-	        Boolean ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020" );
-	        assertTrue("Test if an available item is ok to loan?", ok);
-
-	        //hello
-	
-		
 		//fail("Not yet implemented");
 		// write your code here
+		assertNotNull("Test if there is valid Chromebook arraylist to loan from", chromebookList);
+		
+		//Given an list with 2 item, after loaning 1 item, the size of the list is total 2 
+		ResourceCentre.doLoanChromebook(chromebookList, "CB1", "11-11-1111");		
+		assertEquals("Test if that Chromebook arraylist size is 0?", 2, chromebookList.size());
+		
+		//The item just loan is not an items of the list
+		assertNotSame("Test that Chromebook is loaned is not same as 1st item of the list?", "CB1", chromebookList.get(0));
+		assertNotSame("Test that Chromebook is loaned is not same as 1st item of the list?", "CB1", chromebookList.get(1));
+		
+		//loan item test The size of the list is 2?
+		ResourceCentre.doLoanChromebook(chromebookList, "CB2", "11-11-1111");
+		assertEquals("Test that chromebook arraylist size is 0?", 2, chromebookList.size());
 	}
 	
 	@Test
 	public void doReturnCamcorderTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		//Zuhaili
+		
 		
 	}
 	@Test
 	public void doReturnChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		//Zuhaili
+		ResourceCentre.addChromebook(chromebookList, cb1);
+		ResourceCentre.addChromebook(chromebookList, cb2); 
+		ResourceCentre.doReturnChromebook(chromebookList, "CB0011");
+		assertEquals( "Test if item is available",true, chromebookList.get(1).getIsAvailable());
+		assertEquals( "Test if the item is on loan",false, chromebookList.get(1).getIsAvailable());
+
+		ResourceCentre.doReturnChromebook(chromebookList,"");
+		assertEquals( "Test if item is available","CB0011",chromebookList.get(0).getAssetTag());
 	}
 	
 	@After
@@ -166,13 +209,9 @@ public class ResourceCentreTest {
 		camcorderList = null;
 		chromebookList = null;
 
-<<<<<<< HEAD
-	}
-=======
 	}
 
 
->>>>>>> branch 'master' of https://github.com/19028480-TayWenXuan/ResourceCentre_Student.git
 	
 
 }
