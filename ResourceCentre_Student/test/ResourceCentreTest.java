@@ -101,7 +101,7 @@ public class ResourceCentreTest {
 	        Boolean ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020" );
 	        assertTrue("Test if an available item is ok to loan?", ok);
 
-	        
+	        //hello
 	
 		
 		//fail("Not yet implemented");
