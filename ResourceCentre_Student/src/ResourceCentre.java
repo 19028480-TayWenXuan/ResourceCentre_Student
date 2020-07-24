@@ -212,11 +212,6 @@ public class ResourceCentre {
 	
 	public static boolean doLoanChromebook(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
 		// write your code here
-		return true;
-	}
-	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
-		// write your code here
-
 		String meWantTag = Helper.readString("Enter asset tag >");
 		boolean isAvailable = false;
 		
@@ -232,9 +227,17 @@ public class ResourceCentre {
 			     
 			}
 		}
+		return isAvailable;
+	}
 	
 		
+		
+	
+	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
 	}
+		// write your code here
+
+		
 	
 	//================================= Option 4 Return =================================
 	public static boolean doReturnCamcorder(ArrayList<Camcorder> camcorderList,String tag) {
