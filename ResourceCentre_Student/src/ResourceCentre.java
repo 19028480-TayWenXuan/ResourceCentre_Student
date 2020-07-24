@@ -146,6 +146,12 @@ public class ResourceCentre {
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
 		String output = "";
 		// write your code here
+		for (int i = 0; i < chromebookList.size(); i++) {
+			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", 
+					chromebookList.get(i).getAssetTag(), chromebookList.get(i).getDescription(),
+					chromebookList.get(i).getOs(), chromebookList.get(i).getIsAvailable(),
+					chromebookList.get(i).getDueDate());
+		}
 		return output;
 	}
 	public static void viewAllChromebook(ArrayList<Chromebook> chromebookList) {
@@ -177,8 +183,16 @@ public class ResourceCentre {
 		
 	}	
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
-		// write your code here
+		String newAsset = Helper.readString("Enter asset tag > ");
+		String newDesc = Helper.readString("Enter description > ");
+		String newOS = Helper.readString("Enter operating system > ");
+		chromebookList.add(new Chromebook(newAsset, newDesc, newOS));
+		System.out.print("Chromebook added");
+		//helloitsmeh
 	}
+
+		// write your code here
+	
 	
 	//================================= Option 3 Loan =================================
 	public static boolean doLoanCamcorder(ArrayList<Camcorder> camcorderList, String tag, String dueDate) {
@@ -212,13 +226,33 @@ public class ResourceCentre {
 	
 	public static boolean doLoanChromebook(ArrayList<Chromebook> chromebookList, String tag, String dueDate) {
 		// write your code here
-		return true;
+		String meWantTag = Helper.readString("Enter asset tag >");
+		boolean isAvailable = false;
+		//helloitsmeee
+		
+		for(int i = 0; i<chromebookList.size();i++) {
+			if(chromebookList.get(i).getAssetTag().equalsIgnoreCase(meWantTag)&& chromebookList.get(i).getIsAvailable() == true)  {
+				
+				isAvailable = true;
+				 String date = Helper.readString("Enter due date > ");
+			        chromebookList.get(i).setDueDate(date);
+			        System.out.println("Camcorder " + chromebookList.get(i).getAssetTag() + " loaned out");
+			        break;
+			     
+			}
+		}
+		return isAvailable;
 	}
+	//hello
+	
+		
+		
+	
 	public static void loanChromebook(ArrayList<Chromebook> chromebookList) {
-		// write your code here
-		
-		
 	}
+		// write your code here
+
+		
 	
 	//================================= Option 4 Return =================================
 	public static boolean doReturnCamcorder(ArrayList<Camcorder> camcorderList,String tag) {
@@ -251,16 +285,55 @@ public class ResourceCentre {
 	public static boolean doReturnChromebook(ArrayList<Chromebook> chromebookList,String tag){
 		boolean isReturned = false;
 		// write your code here
+		for (int i = 0; i < chromebookList.size(); i++) {
+			if (tag.equalsIgnoreCase(chromebookList.get(i).getAssetTag()) &&
+					chromebookList.get(i).getIsAvailable() == false) {
+				chromebookList.get(i).setIsAvailable(true);
+				chromebookList.get(i).setDueDate("");
+				isReturned = true;
+			}
+		}
 		return isReturned;
 	}
+<<<<<<< HEAD
+=======
+	
+>>>>>>> branch 'master' of https://github.com/19028480-TayWenXuan/ResourceCentre_Student.git
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
 		// write your code here
+		ResourceCentre.viewAllChromebook(chromebookList);
+		String tag = Helper.readString("Enter asset tag > ");
+		boolean isReturned = doReturnChromebook(chromebookList, tag);
 		// write your code here
+		if (isReturned == false) {
+			System.out.println("Invalid asset tag");
+		} else {
+			System.out.println("Chromebook " + tag + " returned");
+		}
 	}
+<<<<<<< HEAD
     
 	public String concatenate_WenXuan(String one, String two){
+=======
+	
+	public String concatenate_Farahin(String one, String two){
+>>>>>>> branch 'master' of https://github.com/19028480-TayWenXuan/ResourceCentre_Student.git
         return "hello";
 }
+<<<<<<< HEAD
 
 
+=======
+>>>>>>> branch 'master' of https://github.com/19028480-TayWenXuan/ResourceCentre_Student.git
 }
+<<<<<<< HEAD
+=======
+
+	    
+	 
+	
+
+
+
+
+>>>>>>> branch 'master' of https://github.com/19028480-TayWenXuan/ResourceCentre_Student.git

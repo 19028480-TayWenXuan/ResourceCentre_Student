@@ -135,6 +135,13 @@ public class ResourceCentreTest {
 		chromebookList = null;
 
 	}
+<<<<<<< HEAD
+	
+
+	
+
+=======
     
 	
+>>>>>>> branch 'master' of https://github.com/19028480-TayWenXuan/ResourceCentre_Student.git
 }
