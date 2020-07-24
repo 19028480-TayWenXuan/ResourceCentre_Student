@@ -93,6 +93,17 @@ public class ResourceCentreTest {
 	
 	@Test
 	public void doLoanChromebookTest() {
+	    //boundary
+	        assertNotNull("test if there is valid Camcorder arraylist to loan from", camcorderList);
+	       
+	        ResourceCentre.addCamcorder(camcorderList, cc1);
+	        // normal
+	        Boolean ok = ResourceCentre.doLoanCamcorder(camcorderList, "CC0011", "8-8-2020" );
+	        assertTrue("Test if an available item is ok to loan?", ok);
+
+	        
+	
+		
 		//fail("Not yet implemented");
 		// write your code here
 	}
@@ -119,13 +130,6 @@ public class ResourceCentreTest {
 		chromebookList = null;
 
 	}
-<<<<<<< HEAD
 	
 
-	
-
-=======
-    
-	
->>>>>>> branch 'master' of https://github.com/19028480-TayWenXuan/ResourceCentre_Student.git
 }
