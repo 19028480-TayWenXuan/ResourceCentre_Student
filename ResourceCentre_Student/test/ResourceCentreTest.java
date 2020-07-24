@@ -181,7 +181,7 @@ public class ResourceCentreTest {
 	public void doReturnCamcorderTest() {
 		//fail("Not yet implemented");
 		// write your code here
-		//Zuhaili
+		
 		
 		
 	}
