@@ -188,7 +188,7 @@ public class ResourceCentre {
 		String newOS = Helper.readString("Enter operating system > ");
 		chromebookList.add(new Chromebook(newAsset, newDesc, newOS));
 		System.out.print("Chromebook added");
-		//helloitsmeh
+		
 	}
 
 		// write your code here

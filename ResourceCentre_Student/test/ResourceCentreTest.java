@@ -82,6 +82,22 @@ public class ResourceCentreTest {
 	public void retrieveAllChromebookTest() {
 		//fail("Not yet implemented");
 		// write your code here
+		assertNotNull("Test if there is valid Camcorder arraylist to add to", chromebookList);
+		
+		String allChromebook = ResourceCentre.retrieveAllChromebook(chromebookList);
+		String testOutput = "";
+		assertEquals("Check that ViewAllChromebookList", testOutput, allChromebook);
+		
+		ResourceCentre.addChromebook(chromebookList, cb1);
+		ResourceCentre.addChromebook(chromebookList, cb2);
+		assertEquals("Test if that ChromeBook arraylist size is 2?", 2, chromebookList.size());
+		
+		allChromebook= ResourceCentre.retrieveAllChromebook(chromebookList);
+		
+		testOutput = String.format("%-10s %-30s %-10s %-10s %-20d\n","CB001", "ASUS Chromebook ", "Yes", "", 40);
+		testOutput += String.format("%-10s %-30s %-10s %-10s %-20d\n","CB002", "HP Chromebook", "Yes", "", 20);
+	
+		assertEquals("Check that ViewAllCamcorderlist", testOutput, allChromebook);
 	}
 
 	@Test
@@ -109,23 +125,4 @@ public class ResourceCentreTest {
 		// write your code here
 	}
 	
-	@After
-	public void tearDown() throws Exception {
-		cc1 = null;
-		cc2 = null;
-		cb1 = null;
-		cb2 = null;
-		camcorderList = null;
-		chromebookList = null;
-
-	}
-<<<<<<< HEAD
-	
-
-	
-
-=======
-    
-	
->>>>>>> branch 'master' of https://github.com/19028480-TayWenXuan/ResourceCentre_Student.git
 }
