@@ -188,18 +188,11 @@ public class ResourceCentre {
 		
 	}	
 	public static void addChromebook(ArrayList<Chromebook> chromebookList, Chromebook cb) {
-<<<<<<< HEAD
+
 		// write your code here
 		chromebookList.add(cb);
 		System.out.println("Chromebook added");
-=======
-		String newAsset = Helper.readString("Enter asset tag > ");
-		String newDesc = Helper.readString("Enter description > ");
-		String newOS = Helper.readString("Enter operating system > ");
-		chromebookList.add(new Chromebook(newAsset, newDesc, newOS));
-		System.out.print("Chromebook added");
-		//helloitsmeh
->>>>>>> branch 'master' of https://github.com/19028480-TayWenXuan/ResourceCentre_Student.git
+
 	}
 
 		// write your code here
@@ -306,10 +299,8 @@ public class ResourceCentre {
 		}
 		return isReturned;
 	}
-<<<<<<< HEAD
-=======
-	
->>>>>>> branch 'master' of https://github.com/19028480-TayWenXuan/ResourceCentre_Student.git
+
+
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
 		// write your code here
 		ResourceCentre.viewAllChromebook(chromebookList);
@@ -322,27 +313,18 @@ public class ResourceCentre {
 			System.out.println("Chromebook " + tag + " returned");
 		}
 	}
-<<<<<<< HEAD
+
     
 	public String concatenate_WenXuan(String one, String two){
-=======
+		return "hello";
+	}
 	
 	public String concatenate_Farahin(String one, String two){
->>>>>>> branch 'master' of https://github.com/19028480-TayWenXuan/ResourceCentre_Student.git
+
         return "hello";
 }
-<<<<<<< HEAD
 
 
-=======
->>>>>>> branch 'master' of https://github.com/19028480-TayWenXuan/ResourceCentre_Student.git
-}
-<<<<<<< HEAD
-=======
-
-	    
-	 
-<<<<<<< HEAD
 	    public String concatenate(String one, String two){
 	            return "hello";
 
@@ -352,11 +334,9 @@ public class ResourceCentre {
 	}
 
 }
-=======
-	
->>>>>>> branch 'master' of https://github.com/19028480-TayWenXuan/ResourceCentre_Student.git
 
 
 
 
->>>>>>> branch 'master' of https://github.com/19028480-TayWenXuan/ResourceCentre_Student.git
+
+
