@@ -177,8 +177,13 @@ public class ResourceCentre {
 	}
 	
 	public static Chromebook inputChromebook() {	
-		Chromebook cb =null;
-		// write your code here
+		//Chromebook cb =null;
+		// write your codes here
+		String CBtag = Helper.readString("Enter asset tag > ");
+		String CBdescription = Helper.readString("Enter description > ");
+		String os = Helper.readString("Enter operating system > ");
+
+		Chromebook cb= new Chromebook(CBtag, CBdescription, os);
 		return cb;
 		
 	}	
@@ -189,6 +194,11 @@ public class ResourceCentre {
 		chromebookList.add(new Chromebook(newAsset, newDesc, newOS));
 		System.out.print("Chromebook added");
 		
+
+		// write your code here
+		chromebookList.add(cb);
+		System.out.println("Chromebook added");
+
 	}
 
 		// write your code here
@@ -295,7 +305,8 @@ public class ResourceCentre {
 		}
 		return isReturned;
 	}
-	
+
+
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
 		// write your code here
 		ResourceCentre.viewAllChromebook(chromebookList);
@@ -308,15 +319,29 @@ public class ResourceCentre {
 			System.out.println("Chromebook " + tag + " returned");
 		}
 	}
+
+    
+	public String concatenate_WenXuan(String one, String two){
+		return "hello";
+	}
 	
 	public String concatenate_Farahin(String one, String two){
+
         return "hello";
 }
+
+
+	    public String concatenate(String one, String two){
+	            return "hello";
+
+
+		// write your code here
+		// write your code here
+	}
+
 }
 
-	    
-	 
-	
+
 
 
 
