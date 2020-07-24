@@ -146,6 +146,12 @@ public class ResourceCentre {
 	public static String retrieveAllChromebook(ArrayList<Chromebook> chromebookList) {
 		String output = "";
 		// write your code here
+		for (int i = 0; i < chromebookList.size(); i++) {
+			output += String.format("%-10s %-30s %-10s %-10s %-20s\n", 
+					chromebookList.get(i).getAssetTag(), chromebookList.get(i).getDescription(),
+					chromebookList.get(i).getOs(), chromebookList.get(i).getIsAvailable(),
+					chromebookList.get(i).getDueDate());
+		}
 		return output;
 	}
 	public static void viewAllChromebook(ArrayList<Chromebook> chromebookList) {
@@ -284,25 +290,11 @@ public class ResourceCentre {
 	public static void returnChromebook(ArrayList<Chromebook> chromebookList) {
 	
 	}
+}
 	    
 	 
-	    public String concatenate(String one, String two){
-	            return "hello";
+	
 
-
-		// write your code here
-		// write your code here
-	}
-<<<<<<< HEAD
-    
-	public String concatenate_WenXuan(String one, String two){
-        return "hello";
-}
-
-
-=======
->>>>>>> branch 'master' of https://github.com/19028480-TayWenXuan/ResourceCentre_Student.git
-}
 
 
 
